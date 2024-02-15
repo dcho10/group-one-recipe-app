@@ -1,0 +1,59 @@
+body {
+    background-color:#F2FFE9;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #557C55;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  h1 {
+    color: #333;
+    font-size: 32px;
+    margin: 0;
+    text-align: center;
+  }
+  
+  form {
+    width: 300px;
+    margin: 0 auto;
+    display: inline-flex;
+  }
+  
+   fieldset { 
+    background: #A6CF98;
+    border: 5px solid white;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  legend {
+    padding: 10px; 
+    background: #FA7070;
+    color: #F2FFE9;
+  }
+  .search-btn {
+    cursor: pointer;
+  }
+  button[type="submit"] {
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 12px 20px;
+    transition: background-color 0.2s;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0069d9;
+  }
+
+  

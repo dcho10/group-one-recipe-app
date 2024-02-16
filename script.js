@@ -1,4 +1,4 @@
-const videoCardContainer = document.querySelector('.video-container');
+var videoCardContainer = document.querySelector('.video-container');
 
 let api_key = "AIzaSyBaRXW1cQLLhAiCwGrPFD8rB3ia6EUxpSc";
 let video_http = "https://www.googleapis.com/youtube/v3/videos?";
@@ -19,7 +19,7 @@ fetch(video_http + new URLSearchParams({
 })
 .catch(err => console.log(err));
 
-const getChannelIcon = (video_data) => {
+var getChannelIcon = (video_data) => {
     fetch(channel_http + new URLSearchParams({
         key: api_key,
         part: 'snippet',
@@ -32,7 +32,7 @@ const getChannelIcon = (video_data) => {
     })
 }
 
-const makeVideoCard = (data) => {
+var makeVideoCard = (data) => {
     videoCardContainer.innerHTML += `
     <div class="video" onclick="location.href = 'https://youtube.com/watch?v=${data.id}'">
         <img src="${data.snippet.thumbnails.high.url}" class="thumbnail" alt="">
@@ -49,8 +49,8 @@ const makeVideoCard = (data) => {
 
 // search bar
 
-const searchInput = document.querySelector('.search-bar');
-const searchBtn = document.querySelector('.search-btn');
+var searchInput = document.querySelector('.search-bar');
+var searchBtn = document.querySelector('.search-btn');
 let searchLink = "https://www.youtube.com/results?search_query=";
 
 searchBtn.addEventListener('click', () => {

@@ -1,6 +1,7 @@
 // Add modals, 2API, one library (BootStrap maybe)
 
 var searchButton = document.querySelector(".search-button");
+var recipeData;
 
 function getApi () {
     var recipeInput = document.getElementById("recipe-input").value;
@@ -22,14 +23,21 @@ function getApi () {
         if (data.length === 0) {
             console.error("Error fetching recipe data:");
             return;
+        }   
+        
+        var labels = [];
+        for (var i = 0; i < data.hits.length; i++) {
+            var label = data.hits[i].recipe.label;
+            console.log("Recipe Label:", label);
+            labels.push(label);
         }
-            var hits = data.hits[i].recipe.label;
-            console.log("Hits:", hits);
 
-            var shareAs = data.hits[i].recipe.shareAs;
-            console.log("Share As:", shareAs);
+        displayRecipe(labels)
     });
 }
 
-getApi();
 searchButton.addEventListener("click", getApi);
+
+function displayRecipe (labels) {
+    document.querySelector(".recipes").innerHTML = labels.join("<br>");
+}

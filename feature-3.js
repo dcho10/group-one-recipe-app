@@ -1,6 +1,6 @@
 // Add modals, 2API, one library (BootStrap maybe)
 
-var searchButton = document.querySelector(".search-button");
+var searchButton = document.querySelector(".search-btn");
 var recipeData;
 
 function displayModal () {
@@ -84,3 +84,23 @@ function displayRecipe (data) {
     }    
 }
 
+// add ingredient button should just add the ingredient input
+
+var ingredientsBtn = document.querySelector(".add-ingredient-btn");
+
+function displayIngredient () {
+    var ingredientInput = document.getElementById("add-ingredient");
+    var ingredientContainer = document.querySelector(".ingredients");
+
+    var ingredients = ingredientContainer.children;
+
+    var ingredientsEl = document.createElement("li");
+    ingredientsEl.textContent = ingredientInput.value;
+
+    ingredientContainer.appendChild(ingredientsEl);
+
+    ingredientInput.value = "";
+
+    }
+
+ingredientsBtn.addEventListener("click", displayIngredient);

@@ -3,6 +3,22 @@
 var searchButton = document.querySelector(".search-button");
 var recipeData;
 
+function displayModal () {
+    var modal = document.querySelector(".modal-content");
+    var span = document.getElementsByClassName("close")[0];
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+    window.onclick = function(event) {
+        modal.style.display = "none";
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    displayModal();
+});
+
 function getApi () {
     var recipeInput = document.getElementById("recipe-input").value;
 
@@ -65,6 +81,6 @@ function displayRecipe (data) {
         }
     } else {
         console.error("Recipes container not found");
-    }
-    
+    }    
 }
+

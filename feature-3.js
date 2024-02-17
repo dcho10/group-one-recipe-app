@@ -25,19 +25,46 @@ function getApi () {
             return;
         }   
         
-        var labels = [];
-        for (var i = 0; i < data.hits.length; i++) {
-            var label = data.hits[i].recipe.label;
-            console.log("Recipe Label:", label);
-            labels.push(label);
-        }
-
-        displayRecipe(labels)
+        displayRecipe(data)
     });
 }
 
 searchButton.addEventListener("click", getApi);
 
-function displayRecipe (labels) {
-    document.querySelector(".recipes").innerHTML = labels.join("<br>");
+function displayRecipe (data) {
+    var recipesContainer = document.querySelector(".recipes");
+    
+    if (recipesContainer) {
+        recipesContainer.innerHTML = "";
+                
+            for (var i = 0; i < data.hits.length; i++) {
+                var label = data.hits[i].recipe.label;
+                var image = data.hits[i].recipe.image;
+                var shareAs = data.hits[i].recipe.shareAs;
+    
+                console.log("Recipe Label:", label);
+                console.log("Recipe Image:", image);
+                console.log("Share As:", shareAs);
+    
+                var recipeContainer = document.createElement("section");
+
+                var labelHeading = document.createElement("h4");
+                labelHeading.textContent = label;
+
+                var imageEl = document.createElement("img");
+                imageEl.src = image;
+
+                var shareAsLink = document.createElement("a");
+                shareAsLink.href = shareAs;
+                
+                shareAsLink.appendChild(imageEl);
+                shareAsLink.appendChild(labelHeading);
+                
+                recipesContainer.appendChild(shareAsLink);
+                recipesContainer.appendChild(recipeContainer);
+        }
+    } else {
+        console.error("Recipes container not found");
+    }
+    
 }

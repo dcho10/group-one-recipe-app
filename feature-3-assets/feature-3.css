@@ -84,17 +84,11 @@ a {
     cursor: pointer;
 }
 
-.search-btn {
-    background-color: var(--navy-blue);
-    color: var(--white);
-    border-width: 5px;
-}
-
 .create-recipe-btn:hover {
     cursor: pointer;
 }
 
-.create-recipe-btn {
+.search-btn, .create-recipe-btn {
     background-color: var(--navy-blue);
     color: var(--white);
     padding: 15px;

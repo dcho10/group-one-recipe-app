@@ -9,6 +9,7 @@ $(document).ready(function(){
 })
 
 function videoSearch(apiKey,search,maxResults){
+    $("#videos").empty() // used to empty after each search
     $.get("https://www.googleapis.com/youtube/v3/search?key=" + apiKey + "&type=video&part=snippet&maxResults=" + maxResults + "&q=" + search,(data) => {
         console.log(data)
 

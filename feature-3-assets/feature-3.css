@@ -58,8 +58,7 @@ a {
     font-weight: bold;
 }
   
-.close:hover,
-.close:focus {
+.close:hover, .close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;

@@ -3,6 +3,10 @@
 var searchButton = document.querySelector(".search-btn");
 var recipeData;
 
+document.addEventListener("DOMContentLoaded", function () {
+    displayModal();
+});
+
 function displayModal () {
     var modal = document.querySelector(".modal-content");
     var span = document.getElementsByClassName("close")[0];
@@ -11,16 +15,17 @@ function displayModal () {
         modal.style.display = "none";
     }
     window.onclick = function(event) {
-        modal.style.display = "none";
-    }
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    };
+    modal.style.display = "block";
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    displayModal();
-});
-
-function getApi () {
+function getApi (event) {
     var recipeInput = document.getElementById("recipe-input").value;
+    event.preventDefault();
+
 
     if(!recipeInput) {
         console.error("Enter a recipe");
@@ -72,7 +77,8 @@ function displayRecipe (data) {
 
                 var shareAsLink = document.createElement("a");
                 shareAsLink.href = shareAs;
-                
+                shareAsLink.classList.add("a");
+
                 shareAsLink.appendChild(imageEl);
                 shareAsLink.appendChild(labelHeading);
                 
@@ -84,23 +90,56 @@ function displayRecipe (data) {
     }    
 }
 
-// add ingredient button should just add the ingredient input
+// // add ingredient button should just add the ingredient input
 
-var ingredientsBtn = document.querySelector(".add-ingredient-btn");
+// var ingredientBtn = document.querySelector(".add-ingredient-btn");
 
-function displayIngredient () {
-    var ingredientInput = document.getElementById("add-ingredient");
-    var ingredientContainer = document.querySelector(".ingredients");
+// function displayIngredient (event) {
+//     var ingredientInput = document.getElementById("add-ingredient");
+//     var ingredientContainer = document.querySelector(".ingredients");
+    
+//     if (!ingredientInput.value) {
+//         return;
+//     }
+//     var ingredients = ingredientContainer.children;
 
-    var ingredients = ingredientContainer.children;
+//     var ingredientsEl = document.createElement("li");
+//     ingredientsEl.textContent = ingredientInput.value;
 
-    var ingredientsEl = document.createElement("li");
-    ingredientsEl.textContent = ingredientInput.value;
+//     ingredientContainer.appendChild(ingredientsEl);
 
-    ingredientContainer.appendChild(ingredientsEl);
+//     ingredientInput.value = "";
+//     event.preventDefault();
+// }
 
-    ingredientInput.value = "";
+// ingredientBtn.addEventListener("click", displayIngredient);
 
-    }
+// var recipeBtn = document.querySelector(".add-recipe-btn")
 
-ingredientsBtn.addEventListener("click", displayIngredient);
+// function displayRecipe () {
+//     var buildRecipe = document.querySelector(".build-recipe");
+
+//     var titleInput = document.querySelector(".recipe-title");
+//     var ingredientsContainer = document.querySelector(".ingredients");
+//     var instructionsInput = document.querySelector(".recipe-text");
+
+//     var titleEl = document.createElement("h1");
+//     titleEl.textContent = titleInput.value;
+
+//     var ingredientsClone = ingredientsContainer.cloneNode(true);
+//     ingredientsEl = document.createElement("section");
+//     ingredientsEl.appendChild(ingredientsClone);
+
+//     var instructionsEl = document.createElement("p");
+//     instructionsEl.textContent = instructionsInput.value;
+
+//     buildRecipe.appendChild(titleEl);
+//     buildRecipe.appendChild(ingredientsContainer);
+//     buildRecipe.appendChild(instructionsEl);
+
+//     titleInput.value = "";
+//     instructionsInput.value = "";
+
+// }
+
+// recipeBtn.addEventListener("click", displayRecipe)

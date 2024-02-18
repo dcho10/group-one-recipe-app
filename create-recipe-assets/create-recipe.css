@@ -1,0 +1,36 @@
+:root {
+    --navy-blue: #1D2D5C;
+    --royal-blue: #134A8E;
+    --red: #E8291C;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+header {
+    background-color: var(--royal-blue);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+
+}
+
+h1 {
+    font-size: 36px;
+}
+
+.build-recipe {
+    display: flex;
+    flex-direction: column;
+}
+
+.hide {
+    display: none;
+}

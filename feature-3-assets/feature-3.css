@@ -1,0 +1,105 @@
+:root {
+    --navy-blue: #1D2D5C;
+    --royal-blue: #134A8E;
+    --red: #E8291C;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+header {
+    background-color: var(--royal-blue);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+
+}
+
+h1 {
+    font-size: 36px;
+}
+
+.recipes {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2%;
+}
+
+a {
+    flex: 1 0 0;
+    padding: 10px;
+    text-align: center;
+    border-style: solid;
+    border-width: 2px;
+    margin: 10px;
+    color: black;
+    
+}
+
+.modal-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fefefe;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;    
+}
+
+.modal-creditors {
+    display: flex;
+    justify-content: center;
+}
+
+.search-text {
+    display: flex;
+}
+
+.search-btn:hover {
+    cursor: pointer;
+}
+
+.create-recipe-btn:hover {
+    cursor: pointer;
+}
+
+.search-btn, .create-recipe-btn {
+    background-color: var(--navy-blue);
+    color: var(--white);
+    padding: 15px;
+    border-width: 5px;
+}
+
+
+.hide {
+    display: none;
+}

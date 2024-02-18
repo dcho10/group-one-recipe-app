@@ -3,37 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./feature-3-assets/feature-3.css">
     <title>Recipe App</title>
 </head>
 <body>
     <header>
         <h1>Recipe App</h1>
+        <section class="search-text">
+            <input type="text" class="recipe-input" id="recipe-input" placeholder="Enter a dish">
+            <section>
+                <button class="search-btn" class="buttons"> Search </button>
+                <button class="create-recipe-btn" class="buttons" onclick="location.href='create-recipe.html';">Upload</button>
+            </section>
+    
+        </section>
     </header>
 
     <main>
-        <section class="search-text">
-            <input type="text" class="recipe-input" id="recipe-input" placeholder="Enter a dish">
+
+        <section class="modal">
+            <section class="modal-content">
+                <span class="close">&times;</span>
+                <p class="modal-creditors"> This Recipe App was created by: David Cho, Rubal Grewal & James Hughes </p>
+                <p class="modal-text">Welcome to The Recipe App! Click the x to begin!</p>
+            </section>
+        </section>
+
+        <section class="display-recipes">
             <h2 class="recipes"></h2>
-            <button class="search-button"> Search </button>
         </section>
-
-        <section class="build-recipe">
-            <h2> Build Your Recipe!</h2>
-            <h3> Name of recipe </h3>
-            <input type="text" class="recipe-title" id="title" placeholder="Chicken Alfredo">
-
-            <h3> Ingredients </h3>
-            <input type="text" class="ingredients" id="ingredients" placeholder="Add an ingredient">
-            <button class="add-ingredient"> Add </button>
-
-            <h3> Instructions: </h3>
-            <input type="text" class="recipe-text" id="recipe-text" placeholder="Instructions">
-            <button class="add-recipe"> Add Recipe! </button>
-        </section>
-
     </main>
 
-    <script src="feature-3.js"></script>
+    <script src="./feature-3-assets/feature-3.js"></script>
 
 </body>
 </html>

@@ -1,5 +1,3 @@
-// Add modals, 2API, one library (BootStrap maybe)
-
 var searchButton = document.querySelector(".search-btn");
 var recipeData;
 
@@ -52,11 +50,10 @@ function getApi () {
 
 searchButton.addEventListener("click", getApi);
 
-// var createRecipeBtn = document.querySelector(".create-recipe-btn");
-// createRecipeBtn.addEventListener("click", function () {
-//     var buildRecipeSection = document.querySelector(".build-recipe");
-//     buildRecipeSection.style.display = buildRecipeSection.style.display === "none" ? "block" : "none";
-// })
+var createRecipeBtn = document.querySelector(".create-recipe-btn");
+createRecipeBtn.addEventListener("click", function () {
+    window.location.href = "create-recipe.html";
+})
 
 function displayRecipe (data) {
     var recipesContainer = document.querySelector("h2");
@@ -95,56 +92,3 @@ function displayRecipe (data) {
         console.error("Recipes container not found");
     }    
 }
-
-// // add ingredient button should just add the ingredient input
-
-// var ingredientBtn = document.querySelector(".add-ingredient-btn");
-
-// function displayIngredient (event) {
-//     var ingredientInput = document.getElementById("add-ingredient");
-//     var ingredientContainer = document.querySelector(".ingredients");
-    
-//     if (!ingredientInput.value) {
-//         return;
-//     }
-//     var ingredients = ingredientContainer.children;
-
-//     var ingredientsEl = document.createElement("li");
-//     ingredientsEl.textContent = ingredientInput.value;
-
-//     ingredientContainer.appendChild(ingredientsEl);
-
-//     ingredientInput.value = "";
-// }
-
-// ingredientBtn.addEventListener("click", displayIngredient);
-
-// var recipeBtn = document.querySelector(".add-recipe-btn")
-
-// function displayRecipe () {
-//     var buildRecipe = document.querySelector(".build-recipe");
-
-//     var titleInput = document.querySelector(".recipe-title");
-//     var ingredientsContainer = document.querySelector(".ingredients");
-//     var instructionsInput = document.querySelector(".recipe-text");
-
-//     var titleEl = document.createElement("h1");
-//     titleEl.textContent = titleInput.value;
-
-//     var ingredientsClone = ingredientsContainer.cloneNode(true);
-//     ingredientsEl = document.createElement("section");
-//     ingredientsEl.appendChild(ingredientsClone);
-
-//     var instructionsEl = document.createElement("p");
-//     instructionsEl.textContent = instructionsInput.value;
-
-//     buildRecipe.appendChild(titleEl);
-//     buildRecipe.appendChild(ingredientsContainer);
-//     buildRecipe.appendChild(instructionsEl);
-
-//     titleInput.value = "";
-//     instructionsInput.value = "";
-
-// }
-
-// recipeBtn.addEventListener("click", displayRecipe)

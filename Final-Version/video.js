@@ -4,7 +4,7 @@ $(document).ready(function(){
     $("form").submit((any) => {
         any.preventDefault()
         var search = $("#search").val()
-        videoSearch(apiKey,search,8)//where total videos displayed is set
+        videoSearch(apiKey,search,12)//where total videos displayed is set
     })
 })
 

@@ -1,13 +1,31 @@
 $(function(){
  
-  
   var searchIngrediant = $("#submit") 
+
+  searchIngrediant.on("click", function(event) {
+  event.preventDefault();
+        
+  var ingrediantInput= $("#search").val();
+
+  localStorage.setItem("Recipe Searched",JSON.stringify(ingrediantInput));
+     
+  var recipeHistory = JSON.parse(localStorage.getItem("Recipe Searched"));
+
+  const recentRecipes = document.createElement('li')
+  
+  recentRecipes.append(recipeHistory);
+  $(".recent-recipes > ul").append(recentRecipes)
+  
+
+  });
+
   const ImageContainer = document.querySelector("#image-container")
+  
    
   function searchRecipe(){
     
     var ingrediantInput= [$("#search").val()];
-       
+
     var requestUrl = "https://api.edamam.com/search?q="+ingrediantInput+"&app_id=d9dbbc3a&app_key=481712ca78f733b599d5c987ac7e2d9b&from=0&to=10";
       
         fetch(requestUrl)
@@ -16,6 +34,8 @@ $(function(){
           })
 
           .then(function (data) {
+
+    
             ImageContainer.innerHTML = " ";
              
             for(i=0; i<data.hits.length; i++){
@@ -49,7 +69,7 @@ $(function(){
              
               
               <div class="flex-container">
-              <a class="view-btn" target="_blank" href="${recipePage[i]}">View Recipe</a>
+              <a class="view-btn" target="_self" href="${recipePage[i]}">View Recipe</a>
               <div class="tooltip">More information
               <span class="tooltiptext">Cuisine: ${recipeType[i]}, Meal type: ${recipeMealType[i]}</span>
               </div>
@@ -58,10 +78,17 @@ $(function(){
             `
                
               ImageContainer.insertAdjacentHTML("beforeend", htmlrecipe)
+
+              
+
+              
              
-             
-}           
-          }
+}   
+
+
+}
+
+
 
             
           });
@@ -73,9 +100,10 @@ $(function(){
       
   searchIngrediant.on("click", searchRecipe);
   
+  
+    
 
 
       
 })
-
 

@@ -36,7 +36,7 @@ function displayRecipe () {
     ingredientsEl.appendChild(ingredientsClone);
 
     var instructionsEl = document.createElement("p");
-    instructionsEl.textContent = instructionsInput.value;
+    instructionsEl.innerHTML = `<h3>Instructions:</h3><p>${instructionsInput.value}`;
 
     buildRecipe.appendChild(titleEl);
     buildRecipe.appendChild(ingredientsContainer);
@@ -52,8 +52,15 @@ function displayRecipe () {
     title.classList.add("hide");
     ingredientsList.classList.add("hide");
     instructionsText.classList.add("hide");
-    recipeBtn.classList.add("hide")
+    recipeBtn.classList.add("hide");
 
 }
 
 recipeBtn.addEventListener("click", displayRecipe);
+
+document.addEventListener("DOMContentLoaded", function () {
+    var confirmUpload = document.getElementById("confirmUpload");
+    confirmUpload.addEventListener("click", function () {
+        $("#exampleModal").modal("hide");
+    })
+})

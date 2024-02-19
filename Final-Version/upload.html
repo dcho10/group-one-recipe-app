@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="upload.css">
 
-    <title>Document</title>
+    <title>Upload Recipe</title>
 </head>
 <body>
     <header>
@@ -18,14 +19,14 @@
 
         <section class="title">
             <section class="title-text" class="hide">
-                <h3 id ="recipe-name"> Name of recipe </h3>
+                <h3 id ="recipe-name"> Name of recipe: </h3>
                 <input type="text" class="recipe-title" id="title" placeholder="Chicken Alfredo">
             </section>
         </section>
 
         <section class="ingredients">
             <section class="ingredients-list"  class="hide">
-                <h3> Ingredients </h3>
+                <h3> Ingredients: </h3>
                 <input type="text" class="add-ingredient" id="add-ingredient" placeholder="Ingredient and portion">
                 <button class="add-ingredient-btn"> Add ingredient </button>
             </section>
@@ -38,9 +39,38 @@
             </section>
         </section>
 
+    </section>
+
+    <button type="button" class="add-recipe-btn" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Add Recipe!
+    </button>
+    
+    <section class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <section class="modal-dialog" role="document">
+            <section class="modal-content">
+                <section class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Confirm upload</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </section>
+                <section class="modal-body">
+                    Are you sure you want to upload?
+                </section>
+                <section class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" id="confirmUpload" class="btn btn-primary">Yes</button>
+                </section>
+            </section>
         </section>
-    <button class="add-recipe-btn"> Add Recipe! </button>
+    </section>
+
     </main>
 </body>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="upload.js"></script>
+
 </html>

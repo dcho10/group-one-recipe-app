@@ -3,15 +3,8 @@ $(document).ready(function(){
 
     $("form").submit((any) => {
         any.preventDefault()
-        var search = $("#search").val();
-        videoSearch(apiKey,search,12)//where total videos displayed is set
-        localStorage.setItem("Recipe Searched",JSON.stringify(search));
-        var recipeHistory = JSON.parse(localStorage.getItem("Recipe Searched"));
-        const recentRecipes = document.createElement('li')
-        recentRecipes.append(recipeHistory);
-        $(".recent-recipes > ul").append(recentRecipes)
-
-
+        var search = $("#search").val()
+        videoSearch(apiKey,search,8)//where total videos displayed is set
     })
 })
 
@@ -32,4 +25,3 @@ function videoSearch(apiKey,search,maxResults){
     })
 
 }
-

@@ -17,3 +17,8 @@
 * Home Page
 ![Screenshot for Home Page](https://github.com/dcho10/group-one-recipe-app/blob/main/Images/Screenshot%202024-02-20%20095929.png?raw=true)
 * Search Page
+![Screenshot for Search Page](https://github.com/dcho10/group-one-recipe-app/blob/main/Images/Screenshot%202024-02-20%20100411.png?raw=true)
+* Video Page 
+![Screenshot for Video Page](https://github.com/dcho10/group-one-recipe-app/blob/main/Images/Screenshot%202024-02-20%20100448.png?raw=true)
+* Upload Page 
+![Screenshot for Upload Page](https://github.com/dcho10/group-one-recipe-app/blob/main/Images/Screenshot%202024-02-20%20100524.png?raw=true)

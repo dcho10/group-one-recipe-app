@@ -11,7 +11,7 @@
 
 [Link to Group GitHub Repository](https://github.com/dcho10/group-one-recipe-app)
 
-[Link to Live Application]()
+[Link to Live Application Home Page]()
 
 ### Screenshots of Each Page
 * Home Page

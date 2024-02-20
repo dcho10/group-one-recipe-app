@@ -11,6 +11,9 @@
 
 [Link to Group GitHub Repository](https://github.com/dcho10/group-one-recipe-app)
 
-### Screenshots of Each Page
+[Link to Live Application]()
 
-![Screenshot for Home Page]()
+### Screenshots of Each Page
+* Home Page
+![Screenshot for Home Page](https://github.com/dcho10/group-one-recipe-app/blob/main/Images/Screenshot%202024-02-20%20095929.png?raw=true)
+* Search Page

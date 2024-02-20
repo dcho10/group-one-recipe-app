@@ -1,0 +1,100 @@
+:root {
+  --light-green: #A6CF98;
+  --dark-green: #557C55;
+  --bright-green: #F2FFE9;
+  --light-red: #FA7070;
+  --white: white;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+header, footer {
+  background-color: var(--dark-green);
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+}
+
+footer ul {
+  margin: 0;
+  padding: 0;
+}
+
+.fs-4 {
+  font-weight: bold;
+  color: var(--bright-green);
+}
+
+.nav-link {
+  color: var(--bright-green);
+}
+
+.nav-link:hover {
+  color: var(--light-green);
+}
+
+.nav-link:active {
+  color: var(---light-red);
+}
+
+body {
+  background-color: var(--light-green);
+}
+
+.recipe-box, .title, .ingredients-list, .instructions {
+  display: grid;
+  gap: 20px;
+  justify-content: center;
+}
+
+.title-text {
+  display: grid;
+  gap: 20px;
+}
+
+.add-ingredient-btn, .add-recipe-btn {
+  background-color: var(--light-red);
+  color: var(--bright-green);
+  font-weight: bold;
+  border-color: var(--bright-green);
+  border-width: 5px;
+}
+
+.add-recipe-btn {
+  width: 200px;
+}
+.add-ingredient-btn:hover, .add-recipe-btn:hover {
+  cursor: pointer;
+  border-color: var(--dark-green);
+  color: var(--dark-green);
+}
+
+
+h1 {
+  color: var(--dark-green);
+  font-style: italic;
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+}
+
+h3 {
+  color: var(--dark-green);
+  font-style: italic;
+  font-size: 36px;
+}
+
+.hide {
+  display: none;
+}
+
+.recipe-text {
+  height: 300px;
+  width: 700px;
+}

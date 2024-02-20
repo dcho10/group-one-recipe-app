@@ -22,3 +22,9 @@
 ![Screenshot for Video Page](https://github.com/dcho10/group-one-recipe-app/blob/main/Images/Screenshot%202024-02-20%20100448.png?raw=true)
 * Upload Page 
 ![Screenshot for Upload Page](https://github.com/dcho10/group-one-recipe-app/blob/main/Images/Screenshot%202024-02-20%20100524.png?raw=true)
+
+
+#### Source Links
+* [YouTube API](https://console.cloud.google.com/apis/credentials?project=youtube-api-video-link)
+
+* [YouTibe Reference Material](https://www.youtube.com/watch?v=fOKgHld96mU&list=LL&index=2&t=1414s)

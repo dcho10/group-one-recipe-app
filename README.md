@@ -7,11 +7,11 @@
 * Our Recipe app is meant for anyone who loves cooking or people who want to learn to cook. This app allows users to not only search written with all the nutritional facts and/or video recipes, but they can post their own recipes to share to the world! Instead having to search throughout Google for different recipes, and going to different websites to post their recipe, people who use our app can get an all-in-one experience!
 
 ### Important Links
-[Project 1 Outline](https://bootcampspot.instructure.com/courses/4895/assignments/69061?module_item_id=1168830)
+* [Project 1 Outline](https://bootcampspot.instructure.com/courses/4895/assignments/69061?module_item_id=1168830)
 
-[Link to Group GitHub Repository](https://github.com/dcho10/group-one-recipe-app)
+* [Link to Group GitHub Repository](https://github.com/dcho10/group-one-recipe-app)
 
-[Link to Live Application Home Page]()
+* [Link to Live Application Home Page]()
 
 ### Screenshots of Each Page
 * Home Page

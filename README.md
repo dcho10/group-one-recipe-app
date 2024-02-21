@@ -33,4 +33,6 @@
 
 * [W3 Schools](https://www.w3schools.com/)
 
+* [Clone Node](https://www.w3schools.com/jsref/met_node_clonenode.asp)
+
 * [Stack Overflow](https://stackoverflow.com/)

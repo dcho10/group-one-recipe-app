@@ -27,4 +27,10 @@
 #### Source Links
 * [YouTube API](https://console.cloud.google.com/apis/credentials?project=youtube-api-video-link)
 
-* [YouTibe Reference Material](https://www.youtube.com/watch?v=fOKgHld96mU&list=LL&index=2&t=1414s)
+* [YouTube Reference Material](https://www.youtube.com/watch?v=fOKgHld96mU&list=LL&index=2&t=1414s)
+
+* [Recipe API](https://www.edamam.com/)
+
+* [W3 Schools](https://www.w3schools.com/)
+
+* [Stack Overflow](https://stackoverflow.com/)

@@ -17,7 +17,7 @@ header, footer {
 footer {
   position: absolute;
   width: 100%;
-  bottom: 0;
+  bottom: -15;
 }
 
 .fs-4 {
